@@ -1,0 +1,17 @@
+{
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": [
+    "clock",
+    "custom/calendar",
+    "custom/weather",
+    "custom/updatespacman",
+  ],
+  "modules-right": [
+    "group/tray-expander",
+    "network",
+    "cpu",
+    "pulseaudio",
+    "battery",
+    "group/power",
+  ],
+}

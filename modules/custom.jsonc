@@ -1,0 +1,77 @@
+{
+  "custom/updatespacman": {
+    "format": "{} {icon}",
+    "return-type": "json",
+    "format-icons": {
+      "has-updates": "󱍷",
+      "updated": "󰂪"
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300",
+    "on-click": "ghostty -e sh -c 'sudo pacman -Syu; read -p \"Press enter to close...\"'",
+    "tooltip-format": "{} package updates available"
+  },
+  "custom/cava": {
+    "format": "{}",
+    "exec": "~/.config/waybar/cava.sh"
+  },
+  "custom/calendar": {
+    "format": " 󰃭 ",
+    "on-click": "gnome-calendar",
+    "tooltip-format": "Click to open calendar"
+  },
+  "custom/netspeed": {
+    "exec": "~/.config/waybar/net_speed.sh",
+    "interval": 2,
+    "format": "{}",
+    "tooltip-format": "Network Speed\nClick to open network manager",
+    "on-click": "ghostty --class=Impala -e impala"
+  },
+  "custom/gpu": {
+    "exec": "~/.config/waybar/waybar-gpu.sh",
+    "interval": 5,
+    "return-type": "json",
+    "tooltip": true
+  },
+  "custom/power": {
+    "format": "⏻",
+    "tooltip-format": "Power off",
+    "on-click": "systemctl poweroff"
+  },
+  "custom/reboot": {
+    "format": "󰜉",
+    "tooltip-format": "Reboot",
+    "on-click": "systemctl reboot"
+  },
+  "custom/lock": {
+    "format": "󰌾",
+    "tooltip-format": "Lock screen",
+    "on-click": "hyprlock"
+  },
+  "custom/logout": {
+    "format": "󰍃",
+    "tooltip-format": "Log out",
+    "on-click": "hyprctl dispatch exit"
+  },
+  "custom/suspend": {
+    "format": "󰒲",
+    "tooltip-format": "Suspend",
+    "on-click": "systemctl suspend"
+  },
+  "group/power": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "power-group-item",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/power",
+      "custom/reboot",
+      "custom/suspend",
+      "custom/lock",
+      "custom/logout"
+    ]
+  }
+}
+

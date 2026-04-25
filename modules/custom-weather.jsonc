@@ -1,0 +1,10 @@
+{
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 300,
+    "exec": "wttrbar --nerd --location \"Mumbai\"",
+    "return-type": "json",
+    "on-click": "curl -s 'wttr.in/Mumbai?format=3' | xargs -I {} notify-send 'Weather' {}"
+  }
+}

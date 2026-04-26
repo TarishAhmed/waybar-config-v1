@@ -8,7 +8,7 @@
     },
     "exec-if": "which waybar-module-pacman-updates",
     "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300",
-    "on-click": "ghostty -e sh -c 'sudo pacman -Syu; read -p \"Press enter to close...\"'",
+    "on-click": "kitty -e sh -c 'sudo pacman -Syu; read -p \"Press enter to close...\"'",
     "tooltip-format": "{} package updates available"
   },
   "custom/cava": {
@@ -25,7 +25,7 @@
     "interval": 2,
     "format": "{}",
     "tooltip-format": "Network Speed\nClick to open network manager",
-    "on-click": "ghostty --class=Impala -e impala"
+    "on-click": "kitty --class=Impala -e impala"
   },
   "custom/gpu": {
     "exec": "~/.config/waybar/waybar-gpu.sh",

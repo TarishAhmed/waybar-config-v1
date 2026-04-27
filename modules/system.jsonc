@@ -137,7 +137,7 @@
     "path": "/",
     "tooltip-format": "Disk: {used} / {total} ({percentage_used}%)\nFree: {free}",
     "on-click": "kitty -e btop --force-utf",
-    "on-click-right": "thunar",
+    "on-click-right": "dolphin",
     "states": {
       "warning": 80,
       "critical": 90

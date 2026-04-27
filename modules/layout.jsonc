@@ -4,7 +4,7 @@
     "clock",
    // "custom/calendar",
     "custom/weather",
-    "custom/updatespacman",
+    "custom/updatespacman"
   ],
   "modules-right": [
     "group/tray-expander",
@@ -12,6 +12,6 @@
     "cpu",
     "pulseaudio",
     "battery",
-    "group/power",
-  ],
+    "group/power"
+  ]
 }

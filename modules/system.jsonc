@@ -2,7 +2,7 @@
   "cpu": {
     "interval": 5,
     "format": "{usage}% 󰍛",
-    "on-click": "kitty -e btop",
+    "on-click": "kitty -e btop --force-utf",
     "on-click-right": "kitty -e htop",
     "tooltip-format": "CPU: {usage}%\nLoad: {load}"
   },
@@ -14,18 +14,12 @@
   "memory": {
     "interval": 5,
     "format": "  {percentage}%",
-    "on-click": "kitty -e btop",
+    "on-click": "kitty -e btop --force-utf",
     "on-click-right": "kitty -e htop",
     "tooltip-format": "Memory: {used:0.1f}G / {total:0.1f}G ({percentage}%)\nSwap: {swapUsed:0.1f}G / {swapTotal:0.1f}G"
   },
   "network": {
-    "format-icons": [
-      "󰤯",
-      "󰤟",
-      "󰤢",
-      "󰤥",
-      "󰤨"
-    ],
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format": "{icon}",
     "format-wifi": "{icon}",
     "format-ethernet": "{ifname} 󰀂",
@@ -44,30 +38,8 @@
     "format-charging": "{icon}",
     "format-plugged": "{power}",
     "format-icons": {
-      "charging": [
-        "󰢜",
-        "󰂆",
-        "󰂇",
-        "󰂈",
-        "󰢝",
-        "󰂉",
-        "󰢞",
-        "󰂊",
-        "󰂋",
-        "󰂅"
-      ],
-      "default": [
-        "󰁺",
-        "󰁻",
-        "󰁼",
-        "󰁽",
-        "󰁾",
-        "󰁿",
-        "󰂀",
-        "󰂁",
-        "󰂂",
-        "󰁹"
-      ]
+      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
     "format-full": "󰂅",
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%\nTime remaining: {time}",
@@ -97,11 +69,7 @@
     "tooltip-format-muted": "Muted ({volume}%)",
     "scroll-step": 5,
     "format-icons": {
-      "default": [
-        "",
-        "",
-        ""
-      ]
+      "default": ["", "", ""]
     }
   },
   "group/tray-expander": {
@@ -110,11 +78,7 @@
       "transition-duration": 600,
       "children-class": "tray-group-item"
     },
-    "modules": [
-      "custom/expand-icon",
-      "tray",
-      "bluetooth"
-    ]
+    "modules": ["custom/expand-icon", "tray", "bluetooth"]
   },
   "custom/expand-icon": {
     "format": " ",
@@ -162,7 +126,7 @@
       "" // Icon: temperature-full
     ],
     "tooltip-format": "Temperature: {temperatureC}°C",
-    "on-click": "kitty -e btop",
+    "on-click": "kitty -e btop --force-utf",
     "interval": 5
   },
   "disk": {
@@ -172,7 +136,7 @@
     "format-critical": "󰋼 {percentage_used}%",
     "path": "/",
     "tooltip-format": "Disk: {used} / {total} ({percentage_used}%)\nFree: {free}",
-    "on-click": "kitty -e btop",
+    "on-click": "kitty -e btop --force-utf",
     "on-click-right": "thunar",
     "states": {
       "warning": 80,
@@ -191,4 +155,3 @@
     "on-click": "toggle"
   }
 }
-
